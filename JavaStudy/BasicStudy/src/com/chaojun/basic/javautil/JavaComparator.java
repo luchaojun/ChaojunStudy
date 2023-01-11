@@ -23,7 +23,7 @@ public class JavaComparator {
         str.add("a");
         str.sort((a, b) -> {
             System.out.println("a="+a+",b="+b);
-            // a,b是升序  b,a是降序
+            // a,b是升序  b,a是降序  (大写字母大于小写字母)
             return b.compareTo(a);
         });
         System.out.println("str=" + str);
