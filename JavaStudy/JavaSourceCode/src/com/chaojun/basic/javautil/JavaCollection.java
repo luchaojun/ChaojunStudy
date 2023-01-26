@@ -1,8 +1,8 @@
 package com.chaojun.basic.javautil;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.IntStream;
 
 public class JavaCollection {
     public static void main(String[] args) {
@@ -17,5 +17,25 @@ public class JavaCollection {
         hashSet.add("B");
         hashSet.add("C");
         hashSet.forEach(obj -> System.out.println(obj));
+
+        //使用lambda表达式测试removeIf方法 -- 删除符合条件的对象
+        ArrayList<String> list = new ArrayList<>();
+        list.add("123");
+        list.add("145");
+        list.add("167");
+        list.add("8920");
+        list.removeIf(str -> str.contains("1"));
+        System.out.println(list);
+
+
+        IntStream is = IntStream.builder()
+                .add(6)
+                .add(5)
+                .add(7)
+                .add(4)
+                .add(8)
+                .build();
+        OptionalInt max = is.max();
+        System.out.println(max.getAsInt());
     }
 }
