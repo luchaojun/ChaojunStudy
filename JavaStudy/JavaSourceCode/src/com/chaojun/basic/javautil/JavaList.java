@@ -10,14 +10,22 @@ public class JavaList {
         Person cj2 = new Person(2, "cj2", 21);
         Person cj3 = new Person(3, "cj3", 21);
         Person cj4 = new Person(4, "cj4", 21);
-        ArrayList<Person> list = new ArrayList<>();
+        ArrayList<Object> list = new ArrayList<>();
         list.add(cj1);
         list.add(cj2);
         list.add(cj3);
         list.add(cj4);
-        System.out.println(list);
-        list.remove(cj2);
-        System.out.println(list);
+//        System.out.println(list);
+//        list.remove(cj2);
+//        System.out.println(list);
+
+        //测试java 1.8引入的sort方法
+//        list.sort((a, b) -> b.getId() - a.getId());
+//        System.out.println(list);
+
+        //测试java 1.8引入的replaceAll方法
+//        list.replaceAll(person -> ((Person)person).getName());
+//        System.out.println(list);
     }
 }
 
