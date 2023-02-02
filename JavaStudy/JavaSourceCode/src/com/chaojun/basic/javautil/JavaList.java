@@ -1,6 +1,8 @@
 package com.chaojun.basic.javautil;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
 import java.util.Objects;
 
 public class JavaList {
@@ -26,6 +28,18 @@ public class JavaList {
         //测试java 1.8引入的replaceAll方法
 //        list.replaceAll(person -> ((Person)person).getName());
 //        System.out.println(list);
+
+        //测试java1.8引入的ListIterator的一些反向遍历的方法
+        ListIterator<Object> objectListIterator = list.listIterator();
+        while(objectListIterator.hasNext()){
+            System.out.println(objectListIterator.next());
+            objectListIterator.add("-------分隔符--------");
+        }
+        objectListIterator.next();
+        System.out.println("-------加入分隔符字符串后进行反向遍历--------");
+        while(objectListIterator.hasPrevious()){
+            System.out.println(objectListIterator.previous());
+        }
     }
 }
 
