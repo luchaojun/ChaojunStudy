@@ -1,6 +1,7 @@
 package com.chaojun.basic.javautil;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.Objects;
 
 public class JavaMap {
@@ -33,6 +34,8 @@ public class JavaMap {
 ////        System.out.println(map);
 //        System.out.println(map);
 
+
+        //测试加入Map集合的key是可变对象， 修改此key对象后不能被查询到也不能不删除
 //        HashMap<A, String> map = new HashMap<>();
 //        map.put(new A(10), "cj1");
 //        map.put(new A(20), "cj2");
@@ -43,6 +46,13 @@ public class JavaMap {
 //        System.out.println(map.remove(new A(10)));
 //        System.out.println(map.get(new A(20)));
 //        System.out.println(map.get(new A(10)));
+
+        //测试LinkedHashMap的使用
+        LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
+        linkedHashMap.put("x", 13);
+        linkedHashMap.put("Y", 10);
+        linkedHashMap.put("Z", 11);
+        System.out.println(linkedHashMap);
     }
 }
 
