@@ -27,12 +27,68 @@ public class JavaSet {
 //        System.out.println(treeSet.tailSet(5));
 
         //测试compator接口的compare方法排序
-        TreeSet<Integer> treeSet2 = new TreeSet<Integer>((o1,o2)->{return o1>o2 ? 1 : -1;});
-        treeSet2.add(6);
-        treeSet2.add(4);
-        treeSet2.add(7);
-        treeSet2.add(3);
-        treeSet2.add(2);
-        System.out.println(treeSet2);
+//        TreeSet<Integer> treeSet2 = new TreeSet<Integer>((o1,o2)->{return o1>o2 ? 1 : -1;});
+//        treeSet2.add(6);
+//        treeSet2.add(4);
+//        treeSet2.add(7);
+//        treeSet2.add(3);
+//        treeSet2.add(2);
+//        System.out.println(treeSet2);
+
+        TreeSet<TreeSetTest> treeSet = new TreeSet<>();
+        treeSet.add(new TreeSetTest("cj1", 21));
+        treeSet.add(new TreeSetTest("cj2", 22));
+        treeSet.add(new TreeSetTest("cj3", 23));
+        System.out.println(treeSet);
+    }
+}
+class TreeSetTest implements Comparable{
+    private String name;
+    private int age;
+
+    public TreeSetTest(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        System.out.println("equals方法");
+       return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        System.out.println("compareTo方法呗调用");
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "TreeSetTest{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
