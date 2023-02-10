@@ -1,11 +1,10 @@
 package com.chaojun.basic.javautil;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Objects;
+
+import java.io.*;
+import java.util.*;
 
 public class JavaMap {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         //测试HashMap加入数据比对equals方法和hashcode方法
 //        Person p1 = new Person(1, "cj1", 22);
 //        Person p2 = new Person(1, "cj1", 22);
@@ -48,15 +47,37 @@ public class JavaMap {
 //        System.out.println(map.get(new A(10)));
 
         //测试LinkedHashMap的使用
-        LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
-        linkedHashMap.put("x", 13);
-        linkedHashMap.put("Y", 10);
-        linkedHashMap.put("Z", 11);
-        System.out.println(linkedHashMap);
+//        LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
+//        linkedHashMap.put("x", 13);
+//        linkedHashMap.put("Y", 10);
+//        linkedHashMap.put("Z", 11);
+//        System.out.println(linkedHashMap);
+
+
+        //测试properties存储数据到文件
+//        try {
+//            Properties p = new Properties();
+//            p.setProperty("number", "1");
+//            p.setProperty("name", "cj");
+//            p.setProperty("age", "29");
+//            p.store(new FileWriter("test.prop"), "test");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+        //测试properties加载文件到properties
+//        Properties p = new Properties();
+//        p.setProperty("sex", "male");
+//        try {
+//            p.load(new FileReader("test.prop"));
+//            p.store(new FileOutputStream("test.prop"), "test");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println(p);
     }
 }
 
-class A{
+class A {
     private int count;
 
     public A(int count) {
