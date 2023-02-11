@@ -35,6 +35,7 @@ public class JavaSet {
 //        treeSet2.add(2);
 //        System.out.println(treeSet2);
 
+        //测试TreeSet加入自定义对象， 调用equals和compare方法，  如果equals返回true， compareTo返回0代表放入的对象已经存在了
         TreeSet<TreeSetTest> treeSet = new TreeSet<>();
         treeSet.add(new TreeSetTest("cj1", 21));
         treeSet.add(new TreeSetTest("cj2", 22));
