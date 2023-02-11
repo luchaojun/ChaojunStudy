@@ -74,10 +74,46 @@ public class JavaMap {
 //            e.printStackTrace();
 //        }
 //        System.out.println(p);
+
+        //测试TreeMap一些特有的API
+        TreeMap<A, String> treeMap = new TreeMap<>();
+        A a1 = new A(3);
+        A a2 = new A(1);
+        A a3 = new A(2);
+        A a4 = new A(5);
+        A a5 = new A(4);
+        treeMap.put(a1, "3");
+        treeMap.put(a2, "1");
+        treeMap.put(a3, "2");
+        treeMap.put(a4, "5");
+        treeMap.put(a5, "4");
+        System.out.println(treeMap);
+        Map.Entry<A, String> firstEntry = treeMap.firstEntry();
+        System.out.println("firstEntry=" + firstEntry);
+        System.out.println("first key=" + treeMap.firstKey());
+        Map.Entry<A, String> lastEntry = treeMap.lastEntry();
+        System.out.println("lastEntry=" + lastEntry);
+        System.out.println("last key=" + treeMap.lastKey());
+        System.out.println("treeMap.higherEntry=" + treeMap.higherEntry(new A(3)));
+        System.out.println("treeMap.lowerEntry=" + treeMap.lowerEntry(new A(3)));
+        System.out.println("treeMap.higherKey=" + treeMap.higherKey(new A(3)));
+        System.out.println("treeMap.lowerKey=" + treeMap.lowerKey(new A(3)));
+        SortedMap<A, String> subMap2Argue = treeMap.subMap(new A(2), new A(5));
+        System.out.println("subMap=" + subMap2Argue);
+        SortedMap<A, String> subMap4Argue = treeMap.subMap(new A(2), false, new A(5), true);
+        System.out.println("subMap4Argue=" + subMap4Argue);
+        SortedMap<A, String> tailMap1Argue = treeMap.tailMap(new A(3));
+        System.out.println("tailMap1Argue=" + tailMap1Argue);
+        SortedMap<A, String> tailMap2Argue = treeMap.tailMap(new A(3), true);
+        System.out.println("tailMap2Argue=" + tailMap2Argue);
+        SortedMap<A, String> headMap1Argue = treeMap.headMap(new A(3));
+        System.out.println("tailMap1Argue=" + headMap1Argue);
+        SortedMap<A, String> headMap2Argue = treeMap.headMap(new A(3), true);
+        System.out.println("headMap2Argue=" + headMap2Argue);
     }
 }
 
-class A {
+class A implements Comparable {
     private int count;
 
     public A(int count) {
@@ -110,5 +146,11 @@ class A {
     @Override
     public int hashCode() {
         return this.count;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        A a = (A) o;
+        return this.count > a.count ? 1 : (this.count < a.count ? -1 : 0);
     }
 }
