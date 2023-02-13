@@ -1,6 +1,7 @@
 package com.chaojun.basic.javautil;
 
 import java.io.*;
+import java.security.IdentityScope;
 import java.util.*;
 
 public class JavaMap {
@@ -112,21 +113,30 @@ public class JavaMap {
 //        System.out.println("headMap2Argue=" + headMap2Argue);
 
         //测试WeakHashMap的使用方式
-        String s1 = new String("1");
-        String s2 = new String("2");
-        String s3 = new String("3");
-        String s4 = new String("4");
-        String s5 = new String("5");
-        String s6 = new String("6");
-        WeakHashMap<String, String> weakHashMap = new WeakHashMap<>();
-        weakHashMap.put(s1, s2);
-        weakHashMap.put(s3, s4);
-        weakHashMap.put(s5, s6);
-        System.out.println(weakHashMap);
-        s1 = null;
-        s2 = null;
-        System.gc();
-        System.out.println(weakHashMap);
+//        String s1 = new String("1");
+//        String s2 = new String("2");
+//        String s3 = new String("3");
+//        String s4 = new String("4");
+//        String s5 = new String("5");
+//        String s6 = new String("6");
+//        WeakHashMap<String, String> weakHashMap = new WeakHashMap<>();
+//        weakHashMap.put(s1, s2);
+//        weakHashMap.put(s3, s4);
+//        weakHashMap.put(s5, s6);
+//        System.out.println(weakHashMap);
+//        s1 = null;
+//        s2 = null;
+//        System.gc();
+//        System.out.println(weakHashMap);
+
+          //测试IdentityHashMap
+//        IdentityHashMap<String, String> stringStringIdentityHashMap = new IdentityHashMap<>();
+//        stringStringIdentityHashMap.put(new String("1"), "1");
+//        stringStringIdentityHashMap.put(new String("1"), "2");
+//        stringStringIdentityHashMap.put("1", "6");
+//        stringStringIdentityHashMap.put("1", "4");
+//        stringStringIdentityHashMap.put("1", "3");
+//        System.out.println(stringStringIdentityHashMap);
     }
 }
 
