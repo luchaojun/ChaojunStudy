@@ -137,7 +137,20 @@ public class JavaMap {
 //        stringStringIdentityHashMap.put("1", "4");
 //        stringStringIdentityHashMap.put("1", "3");
 //        System.out.println(stringStringIdentityHashMap);
+
+        //测试EnumMap
+        EnumMap<Season, String> enumMap = new EnumMap<>(Season.class);
+        enumMap.put(Season.WINTER, "冬季");
+        enumMap.put(Season.SPRING, "春季");
+        enumMap.put(Season.SUMMER, "夏季");
+        enumMap.put(Season.AUTUMN, "秋季");
+        System.out.println("enumMap="+enumMap);
     }
+
+}
+
+enum Season{
+    SPRING, SUMMER, AUTUMN, WINTER
 }
 
 class A implements Comparable {
