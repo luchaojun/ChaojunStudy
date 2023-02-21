@@ -48,6 +48,9 @@ public class JavaReflectTest {
         age.setAccessible(true);
         age.setInt(classTest, 456);
         System.out.println(classTest.getName()+"...."+classTest.getAge());
+
+        Method paramMethod = classTestClazz.getDeclaredMethod("test1", int.class);
+        System.out.println("DefineParaMethod="+paramMethod);
     }
 }
 
