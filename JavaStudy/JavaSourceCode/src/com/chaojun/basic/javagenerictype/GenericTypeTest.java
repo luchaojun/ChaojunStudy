@@ -1,6 +1,7 @@
 package com.chaojun.basic.javagenerictype;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class GenericTypeTest {
     public static void main(String[] args) {
@@ -12,8 +13,44 @@ public class GenericTypeTest {
 //            }
 //        };
 
-        Person person = new Person();
-        person.info(123);
+//        List<String>不是List<Object>的子类
+//        new GenericTypeTest().genericTest(new ArrayList<String>());
+
+        //下列代码运行时才会报错
+//        Integer[] a = {1,2,3};
+//        Number[] b = a;
+//        b[0] = 0.1;
+
+        //此集合声明方式只能放入null
+//        ArrayList<?> list = new ArrayList<>();
+//        list.add(null);
+//        System.out.println(list.get(0));
+    }
+
+
+    public void genericTest(List<Object> list){
+        System.out.println("GenericTest方法被调用了");
+    }
+}
+
+class Car<T>{
+
+    //静态代码块不能使用泛型
+//    static{
+//        T t;
+//    }
+
+//    static T t;  静态变量不能使用泛型
+
+    //静态方法不能使用泛型
+//    public static void drive(T t){
+//
+//    }
+
+    public void test(){
+        ArrayList<String> list = new ArrayList<>();
+        //instance运算符后面不能使用泛型
+//        System.out.println(list instanceof java.util.ArrayList<String>);
     }
 }
 
