@@ -1,6 +1,7 @@
 package com.chaojun.basic.javagenerictype;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class GenericTypeTest {
@@ -25,11 +26,20 @@ public class GenericTypeTest {
 //        ArrayList<?> list = new ArrayList<>();
 //        list.add(null);
 //        System.out.println(list.get(0));
+
+        ArrayList<Date> dates = new ArrayList<Date>();
+        dates.add(new Date());
+        dates.add(new Date());
+        dates.add(new Date());
+        new GenericTypeTest().genericTest(dates);
     }
 
 
-    public void genericTest(List<Object> list){
-        System.out.println("GenericTest方法被调用了");
+
+
+    public void genericTest(List<?> list){
+        //List<?> 取出来的内容是Object类型
+        Object o = list.get(0);
     }
 }
 
