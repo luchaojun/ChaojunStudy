@@ -2,3 +2,6 @@
 2023/1/10 22:38 Java 8 实战.pdf  P23
 2023/2/2 13:08 Java瘋狂講義 P1770
 2023/02/17 13:03  MySQL技术内幕(第4版).pdf  P68
+
+範型講解:
+	https://blog.csdn.net/luxinfeng666/article/details/114794030
