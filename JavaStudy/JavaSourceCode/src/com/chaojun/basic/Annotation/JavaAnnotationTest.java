@@ -1,5 +1,9 @@
 package com.chaojun.basic.Annotation;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,4 +28,26 @@ public class JavaAnnotationTest {
     public static void test(){
 
     }
+}
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.CONSTRUCTOR)
+@interface testable{
+
+}
+
+class A{ }
+
+
+@FunctionalInterface
+interface Test{
+    default void test(){
+        System.out.println("123");
+    }
+
+    static void Test(){
+
+    }
+
+    public void test2();
 }
