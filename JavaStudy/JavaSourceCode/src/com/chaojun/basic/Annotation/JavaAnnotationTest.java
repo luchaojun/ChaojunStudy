@@ -1,9 +1,5 @@
 package com.chaojun.basic.Annotation;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +7,7 @@ import java.util.List;
 //@SuppressWarnings(value = "unchecked")
 public class JavaAnnotationTest {
     public static void main(String[] args) {
-        JavaAnnotationTest.test();
+//        JavaAnnotationTest.test();
 
         //堆污染
 //        List list = new ArrayList<Integer>();
@@ -20,7 +16,10 @@ public class JavaAnnotationTest {
 //        System.out.println(l.get(0));
 
         //测试可能有堆污染的方法 使用@SafeVarargs， 消除堆污染
-        JavaAnnotationTest.testAnnotation("123", "456");
+//        JavaAnnotationTest.testAnnotation("123", "456");
+
+        //测试Inherited注解，  看继承性
+        System.out.println(InheritableClassSon.class.isAnnotationPresent(TestInheritable.class));
     }
 
     //测试堆污染
@@ -34,6 +33,22 @@ public class JavaAnnotationTest {
     public static void test(){
 
     }
+}
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+@Inherited
+@interface TestInheritable{
+
+}
+
+@TestInheritable
+class InheritableClass{
+
+}
+
+class InheritableClassSon extends InheritableClass{
+
 }
 
 @Retention(RetentionPolicy.RUNTIME)
@@ -55,5 +70,5 @@ interface Test{
 
     }
 
-    public void test2();
+    void test2();
 }
