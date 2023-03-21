@@ -1,0 +1,24 @@
+<inventory>
+    <book year="w2000w">
+        <title>Snow Crash</title>
+        <author>Neal Stephenson</author>
+        <publisher>Spcctra</publisher>
+        <isbn>0553380958</isbn>
+        <price>14.95</price>
+    </book>
+    <book year="M2005">
+        <title>Burning Tower</title>
+        <author>Larry Niven</author>
+        <author>Jerry Pournelle</author>
+        <publisher>Pocket</publisher>
+        <isbn>0743416910</isbn>
+        <price>5・ 99</price>
+    </book>
+    <book year="1995H">
+        <title>ZodidC</title>
+        <author>Nedl Stephenson</author>
+        <publisher>Spectra</publisher>
+        <isbn>0553573862</isbn>
+        <price>7.50</price>
+    </book>
+</inventory>
