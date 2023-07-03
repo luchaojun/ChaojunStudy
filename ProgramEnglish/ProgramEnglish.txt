@@ -1,0 +1,12 @@
+pattern /ˈpætərn/ 格式
+format /ˈfɔːrmæt/ 格式化
+specified/ˈspesɪfaɪd/ adj 规定的
+equivalent [ɪˈkwɪvələnt] adj 等價的
+uderlying [ˌʌndərˈlaɪɪŋ] adj 潛在的
+instantiated  實例化
+expression [ɪkˈspreʃn] 表達式
+tuple 元組
+prompt string 提示字符串
+dict 字典
+substitutions [ˌsʌbstɪˈtjuʃənz] 取代
+leading and trailing 前後
